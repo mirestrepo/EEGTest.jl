@@ -2,7 +2,7 @@
 
 | Travis CI | Coverage | License | Documentation|
 |-----------|----------|---------|--------------|
-| [![Build&Test Status](https://travis-ci.org/mirestrepo/EEGAnalysis.jl.svg?branch=master)](https://travis-ci.org/mirestrepo/EEGAnalysis.jl)| [![codecov](https://codecov.io/gh/mirestrepo/EEGAnalysis.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/mirestrepo/EEGAnalysis.jl)|[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/mirestrepo/EEGAnalysis.jl/master/LICENSE.md) | [![](https://img.shields.io/badge/docs-stable-blue.svg)](https://mirestrepo.github.io/EEGAnalysis.jl/stable) [![](https://img.shields.io/badge/docs-latest-blue.svg)](https://mirestrepo.github.io/EEGAnalysis.jl/latest)
+| [![Build&Test Status](https://travis-ci.org/mirestrepo/EEGTest.jl.svg?branch=master)](https://travis-ci.org/mirestrepo/EEGTest.jl)| [![codecov](https://codecov.io/gh/mirestrepo/EEGTest.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/mirestrepo/EEGTest.jl)|[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/mirestrepo/EEGTest.jl/master/LICENSE.md) | [![](https://img.shields.io/badge/docs-stable-blue.svg)](https://mirestrepo.github.io/EEGTest.jl/stable) [![](https://img.shields.io/badge/docs-latest-blue.svg)](https://mirestrepo.github.io/EEGTest.jl/latest)
 
 Library for analyzing EEG and ECoG data.
 Work in progress, not to be used/trusted yet.
