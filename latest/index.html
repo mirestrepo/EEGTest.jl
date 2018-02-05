@@ -1,0 +1,727 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Julia EEGTest">
+      
+      
+      
+        <meta name="author" content="github.com/NeuroMotion">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="./assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-2.6.0">
+    
+    
+      
+        <title>EEGTest</title>
+      
+    
+    
+      <link rel="stylesheet" href="./assets/stylesheets/application.aa3de92b.css">
+      
+    
+    
+      <script src="./assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <link rel="stylesheet" href="./assets/Documenter.css">
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#eegtest" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="." title="EEGTest" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                EEGTest
+              </span>
+              <span class="md-header-nav__topic">
+                Home
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/mirestrepo/EEGTest.jl/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </span>
+    EEGTest
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/mirestrepo/EEGTest.jl/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Home
+      </label>
+    
+    <a href="." title="Home" class="md-nav__link md-nav__link--active">
+      Home
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" title="Installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-functionality" title="General Functionality" class="md-nav__link">
+    General Functionality
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#index" title="Index" class="md-nav__link">
+    Index
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions" title="Functions" class="md-nav__link">
+    Functions
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" title="Installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-functionality" title="General Functionality" class="md-nav__link">
+    General Functionality
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#index" title="Index" class="md-nav__link">
+    Index
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions" title="Functions" class="md-nav__link">
+    Functions
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/mirestrepo/EEGTest.jl/edit/master/docs/index.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <p><a id='EEGTest-1'></a></p>
+<h1 id="eegtest">EEGTest</h1>
+<p>Library for analyzing EEG and ECoG data. Work in progress, not to be used/trusted yet.</p>
+<p><a id='Installation-1'></a></p>
+<h2 id="installation">Installation</h2>
+<div class="codehilite"><pre><span></span><span class="n">Pkg</span><span class="o">.</span><span class="n">clone</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<p><a id='General-Functionality-1'></a></p>
+<h2 id="general-functionality">General Functionality</h2>
+<ul>
+<li>Create a session with desired name and directory</li>
+<li>Use load_eeg function to load data into the session from specific channels</li>
+<li>Use lowpass_session or highpass_session to filter the session</li>
+<li>Create plot using the appropriate plotting function</li>
+</ul>
+<p><a id='Index-1'></a></p>
+<h2 id="index">Index</h2>
+<ul>
+<li><a href=".#EEGTest.AnalogData-Tuple{Array{Float64,2},Array{Float64,1}}"><code>EEGTest.AnalogData</code></a></li>
+<li><a href=".#EEGTest.DigitalData-Tuple{Array{Bool,2},Array{Float64,1}}"><code>EEGTest.DigitalData</code></a></li>
+<li><a href=".#EEGTest.Session"><code>EEGTest.Session</code></a></li>
+<li><a href=".#EEGTest.Spectrogram"><code>EEGTest.Spectrogram</code></a></li>
+<li><a href=".#EEGTest.ad_equals-Tuple{EEGTest.AnalogData,EEGTest.AnalogData}"><code>EEGTest.ad_equals</code></a></li>
+<li><a href=".#EEGTest.dd_equals-Tuple{EEGTest.DigitalData,EEGTest.DigitalData}"><code>EEGTest.dd_equals</code></a></li>
+<li><a href=".#EEGTest.debounce_discrete_signal-Tuple{Array{Bool,1},Int64}"><code>EEGTest.debounce_discrete_signal</code></a></li>
+<li><a href=".#EEGTest.debounce_discrete_signal-Tuple{EEGTest.DigitalData,Int64}"><code>EEGTest.debounce_discrete_signal</code></a></li>
+<li><a href=".#EEGTest.down_sample-Tuple{EEGTest.AnalogData,Int64}"><code>EEGTest.down_sample</code></a></li>
+<li><a href=".#EEGTest.down_sample-Tuple{Array{Float64,1},Int64}"><code>EEGTest.down_sample</code></a></li>
+<li><a href=".#EEGTest.format_full_array-Tuple{Array{Float64,1}}"><code>EEGTest.format_full_array</code></a></li>
+<li><a href=".#EEGTest.highpass"><code>EEGTest.highpass</code></a></li>
+<li><a href=".#EEGTest.highpass"><code>EEGTest.highpass</code></a></li>
+<li><a href=".#EEGTest.highpass_session"><code>EEGTest.highpass_session</code></a></li>
+<li><a href=".#EEGTest.ica-Tuple{EEGTest.AnalogData}"><code>EEGTest.ica</code></a></li>
+<li><a href=".#EEGTest.load_continuous-Tuple{String,Int64}"><code>EEGTest.load_continuous</code></a></li>
+<li><a href=".#EEGTest.load_continuous_channels"><code>EEGTest.load_continuous_channels</code></a></li>
+<li><a href=".#EEGTest.load_eeg"><code>EEGTest.load_eeg</code></a></li>
+<li><a href=".#EEGTest.lowpass"><code>EEGTest.lowpass</code></a></li>
+<li><a href=".#EEGTest.lowpass"><code>EEGTest.lowpass</code></a></li>
+<li><a href=".#EEGTest.lowpass_session"><code>EEGTest.lowpass_session</code></a></li>
+<li><a href=".#EEGTest.normalize_data-Tuple{EEGTest.AnalogData}"><code>EEGTest.normalize_data</code></a></li>
+<li><a href=".#EEGTest.normalize_data-Tuple{Array{T,1} where T}"><code>EEGTest.normalize_data</code></a></li>
+<li><a href=".#EEGTest.session_equals-Tuple{EEGTest.Session,EEGTest.Session}"><code>EEGTest.session_equals</code></a></li>
+<li><a href=".#EEGTest.threshold_01-Tuple{EEGTest.AnalogData,Float64}"><code>EEGTest.threshold_01</code></a></li>
+<li><a href=".#EEGTest.threshold_01-Tuple{Array{Float64,1},Float64}"><code>EEGTest.threshold_01</code></a></li>
+<li><a href=".#EEGTest.toDecibels-Tuple{EEGTest.AnalogData,Float64}"><code>EEGTest.toDecibels</code></a></li>
+<li><a href=".#EEGTest.toDecibels-Tuple{Array{Float64,1},Float64}"><code>EEGTest.toDecibels</code></a></li>
+<li><a href=".#EEGTest.truncate_by_index-Tuple{Array{Float64,1},Array{Float64,1},Array{Int64,1}}"><code>EEGTest.truncate_by_index</code></a></li>
+<li><a href=".#EEGTest.truncate_by_index-Tuple{EEGTest.AnalogData,Array{Int64,1}}"><code>EEGTest.truncate_by_index</code></a></li>
+<li><a href=".#EEGTest.truncate_by_value-Tuple{Array{Float64,1},Array{Float64,1},Array{Float64,1}}"><code>EEGTest.truncate_by_value</code></a></li>
+<li><a href=".#EEGTest.truncate_by_value-Tuple{EEGTest.AnalogData,Array{Float64,1}}"><code>EEGTest.truncate_by_value</code></a></li>
+</ul>
+<p><a id='Functions-1'></a></p>
+<h2 id="functions">Functions</h2>
+<p><a id='EEGTest.ad_equals-Tuple{EEGTest.AnalogData,EEGTest.AnalogData}' href='#EEGTest.ad_equals-Tuple{EEGTest.AnalogData,EEGTest.AnalogData}'>#</a>
+<strong><code>EEGTest.ad_equals</code></strong> &mdash; <em>Method</em>.</p>
+<div class="codehilite"><pre><span></span>ad_equals(adone::AnaloglData, adtwo::AnalogData)
+</pre></div>
+
+
+<p>Check whether two analogdata objects are equal.</p>
+<p><a target='_blank' href='https://github.com/mirestrepo/EEGTest.jl/blob/d34916b4f098b8ad43b103c25b212f03cba7676c/src/eegtypes.jl#L29-L32' class='documenter-source'>source</a><br></p>
+<p><a id='EEGTest.dd_equals-Tuple{EEGTest.DigitalData,EEGTest.DigitalData}' href='#EEGTest.dd_equals-Tuple{EEGTest.DigitalData,EEGTest.DigitalData}'>#</a>
+<strong><code>EEGTest.dd_equals</code></strong> &mdash; <em>Method</em>.</p>
+<div class="codehilite"><pre><span></span>dd_equals(ddone::DigitalData, ddtwo::DigitalData)
+</pre></div>
+
+
+<p>Check whether two digitaldata objects are equal.</p>
+<p><a target='_blank' href='https://github.com/mirestrepo/EEGTest.jl/blob/d34916b4f098b8ad43b103c25b212f03cba7676c/src/eegtypes.jl#L123-L126' class='documenter-source'>source</a><br></p>
+<p><a id='EEGTest.debounce_discrete_signal-Tuple{Array{Bool,1},Int64}' href='#EEGTest.debounce_discrete_signal-Tuple{Array{Bool,1},Int64}'>#</a>
+<strong><code>EEGTest.debounce_discrete_signal</code></strong> &mdash; <em>Method</em>.</p>
+<div class="codehilite"><pre><span></span>debounce_discrete_signal(x, min_samples_per_chunk)
+</pre></div>
+
+
+<p>For use after threshold_01. Remove any bounces shorter than min_samples_per_chunk, with the exception of a short leading bounce at the beginning of the array.</p>
+<p><a target='_blank' href='https://github.com/mirestrepo/EEGTest.jl/blob/d34916b4f098b8ad43b103c25b212f03cba7676c/src/eegutilities.jl#L163-L168' class='documenter-source'>source</a><br></p>
+<p><a id='EEGTest.debounce_discrete_signal-Tuple{EEGTest.DigitalData,Int64}' href='#EEGTest.debounce_discrete_signal-Tuple{EEGTest.DigitalData,Int64}'>#</a>
+<strong><code>EEGTest.debounce_discrete_signal</code></strong> &mdash; <em>Method</em>.</p>
+<div class="codehilite"><pre><span></span>debounce_discrete_signal(dd::DigitalData, min_samples_per_chunk::Int64)
+</pre></div>
+
+
+<p>For use after threshold_01. Remove any bounces shorter than min_samples_per_chunk in every channel of x_all of the DigitalData object, with the exception of a short leading bounce at the beginning of the array.</p>
+<p><a target='_blank' href='https://github.com/mirestrepo/EEGTest.jl/blob/d34916b4f098b8ad43b103c25b212f03cba7676c/src/eegutilities.jl#L189-L194' class='documenter-source'>source</a><br></p>
+<p><a id='EEGTest.down_sample-Tuple{Array{Float64,1},Int64}' href='#EEGTest.down_sample-Tuple{Array{Float64,1},Int64}'>#</a>
+<strong><code>EEGTest.down_sample</code></strong> &mdash; <em>Method</em>.</p>
+<div class="codehilite"><pre><span></span>down_sample(x::Vector{Float64}, factor::Int64)
+</pre></div>
+
+
+<p>Downsample a vector x by a given factor. (If factor is 3, keep one value out of every three)</p>
+<p><a target='_blank' href='https://github.com/mirestrepo/EEGTest.jl/blob/d34916b4f098b8ad43b103c25b212f03cba7676c/src/eegutilities.jl#L98-L101' class='documenter-source'>source</a><br></p>
+<p><a id='EEGTest.down_sample-Tuple{EEGTest.AnalogData,Int64}' href='#EEGTest.down_sample-Tuple{EEGTest.AnalogData,Int64}'>#</a>
+<strong><code>EEGTest.down_sample</code></strong> &mdash; <em>Method</em>.</p>
+<div class="codehilite"><pre><span></span>down_sample(ad::AnalogData, factor::Int64)
+</pre></div>
+
+
+<p>Downsample every channel in x_all of an analogdata object by a given factor.</p>
+<p><a target='_blank' href='https://github.com/mirestrepo/EEGTest.jl/blob/d34916b4f098b8ad43b103c25b212f03cba7676c/src/eegutilities.jl#L110-L113' class='documenter-source'>source</a><br></p>
+<p><a id='EEGTest.highpass' href='#EEGTest.highpass'>#</a>
+<strong><code>EEGTest.highpass</code></strong> &mdash; <em>Function</em>.</p>
+<div class="codehilite"><pre><span></span>highpass(ad::AnalogData, cutoff, fs, order=5)
+</pre></div>
+
+
+<p>Highpass filter every channel in x_all of an AnalogData object.</p>
+<p><a target='_blank' href='https://github.com/mirestrepo/EEGTest.jl/blob/d34916b4f098b8ad43b103c25b212f03cba7676c/src/eegutilities.jl#L85-L88' class='documenter-source'>source</a><br></p>
+<p><a id='EEGTest.highpass' href='#EEGTest.highpass'>#</a>
+<strong><code>EEGTest.highpass</code></strong> &mdash; <em>Function</em>.</p>
+<div class="codehilite"><pre><span></span>highpass(data, cutoff, fs, order=5)
+</pre></div>
+
+
+<p>Highpass filter data</p>
+<p><a target='_blank' href='https://github.com/mirestrepo/EEGTest.jl/blob/d34916b4f098b8ad43b103c25b212f03cba7676c/src/eegutilities.jl#L75-L78' class='documenter-source'>source</a><br></p>
+<p><a id='EEGTest.lowpass' href='#EEGTest.lowpass'>#</a>
+<strong><code>EEGTest.lowpass</code></strong> &mdash; <em>Function</em>.</p>
+<div class="codehilite"><pre><span></span>lowpass(ad::AnalogData, cutoff, fs, order=5)
+</pre></div>
+
+
+<p>Lowpass filter every channel in x_all of an AnalogData object.</p>
+<p><a target='_blank' href='https://github.com/mirestrepo/EEGTest.jl/blob/d34916b4f098b8ad43b103c25b212f03cba7676c/src/eegutilities.jl#L62-L65' class='documenter-source'>source</a><br></p>
+<p><a id='EEGTest.lowpass' href='#EEGTest.lowpass'>#</a>
+<strong><code>EEGTest.lowpass</code></strong> &mdash; <em>Function</em>.</p>
+<div class="codehilite"><pre><span></span>lowpass(data, cutoff, fs, order=5)
+</pre></div>
+
+
+<p>Lowpass filter data</p>
+<p><a target='_blank' href='https://github.com/mirestrepo/EEGTest.jl/blob/d34916b4f098b8ad43b103c25b212f03cba7676c/src/eegutilities.jl#L52-L55' class='documenter-source'>source</a><br></p>
+<p><a id='EEGTest.normalize_data-Tuple{Array{T,1} where T}' href='#EEGTest.normalize_data-Tuple{Array{T,1} where T}'>#</a>
+<strong><code>EEGTest.normalize_data</code></strong> &mdash; <em>Method</em>.</p>
+<div class="codehilite"><pre><span></span>normalize_data(x)
+</pre></div>
+
+
+<p>Normalize data</p>
+<p><a target='_blank' href='https://github.com/mirestrepo/EEGTest.jl/blob/d34916b4f098b8ad43b103c25b212f03cba7676c/src/eegutilities.jl#L3-L6' class='documenter-source'>source</a><br></p>
+<p><a id='EEGTest.normalize_data-Tuple{EEGTest.AnalogData}' href='#EEGTest.normalize_data-Tuple{EEGTest.AnalogData}'>#</a>
+<strong><code>EEGTest.normalize_data</code></strong> &mdash; <em>Method</em>.</p>
+<div class="codehilite"><pre><span></span>normalize_data(ad::AnalogData)
+</pre></div>
+
+
+<p>Normalize every channel of x_all of an AnalogData object.</p>
+<p><a target='_blank' href='https://github.com/mirestrepo/EEGTest.jl/blob/d34916b4f098b8ad43b103c25b212f03cba7676c/src/eegutilities.jl#L12-L15' class='documenter-source'>source</a><br></p>
+<p><a id='EEGTest.threshold_01-Tuple{Array{Float64,1},Float64}' href='#EEGTest.threshold_01-Tuple{Array{Float64,1},Float64}'>#</a>
+<strong><code>EEGTest.threshold_01</code></strong> &mdash; <em>Method</em>.</p>
+<div class="codehilite"><pre><span></span>threshold_01(x, threshold)
+</pre></div>
+
+
+<p>Turn all values above a threshold into ones and all values below into zeros</p>
+<p><a target='_blank' href='https://github.com/mirestrepo/EEGTest.jl/blob/d34916b4f098b8ad43b103c25b212f03cba7676c/src/eegutilities.jl#L26-L29' class='documenter-source'>source</a><br></p>
+<p><a id='EEGTest.threshold_01-Tuple{EEGTest.AnalogData,Float64}' href='#EEGTest.threshold_01-Tuple{EEGTest.AnalogData,Float64}'>#</a>
+<strong><code>EEGTest.threshold_01</code></strong> &mdash; <em>Method</em>.</p>
+<div class="codehilite"><pre><span></span>threshold_01(ad::AnalogData, threshold)
+</pre></div>
+
+
+<p>Turn all values above a threshold into ones and all values below into zeros for each channel in x_all of an AnalogData object.</p>
+<p><a target='_blank' href='https://github.com/mirestrepo/EEGTest.jl/blob/d34916b4f098b8ad43b103c25b212f03cba7676c/src/eegutilities.jl#L37-L41' class='documenter-source'>source</a><br></p>
+<p><a id='EEGTest.toDecibels-Tuple{Array{Float64,1},Float64}' href='#EEGTest.toDecibels-Tuple{Array{Float64,1},Float64}'>#</a>
+<strong><code>EEGTest.toDecibels</code></strong> &mdash; <em>Method</em>.</p>
+<div class="codehilite"><pre><span></span>toDecibels(x, x_ref)
+</pre></div>
+
+
+<p>Covert x to decibels with reference x_ref.</p>
+<p><a target='_blank' href='https://github.com/mirestrepo/EEGTest.jl/blob/d34916b4f098b8ad43b103c25b212f03cba7676c/src/eegutilities.jl#L141-L144' class='documenter-source'>source</a><br></p>
+<p><a id='EEGTest.toDecibels-Tuple{EEGTest.AnalogData,Float64}' href='#EEGTest.toDecibels-Tuple{EEGTest.AnalogData,Float64}'>#</a>
+<strong><code>EEGTest.toDecibels</code></strong> &mdash; <em>Method</em>.</p>
+<div class="codehilite"><pre><span></span>toDecibels(ad::AnalogData, x_ref)
+</pre></div>
+
+
+<p>Covert each channel of x_all of the AnalogData object to decibels with reference x_ref.</p>
+<p><a target='_blank' href='https://github.com/mirestrepo/EEGTest.jl/blob/d34916b4f098b8ad43b103c25b212f03cba7676c/src/eegutilities.jl#L149-L153' class='documenter-source'>source</a><br></p>
+<p><a id='EEGTest.truncate_by_index-Tuple{Array{Float64,1},Array{Float64,1},Array{Int64,1}}' href='#EEGTest.truncate_by_index-Tuple{Array{Float64,1},Array{Float64,1},Array{Int64,1}}'>#</a>
+<strong><code>EEGTest.truncate_by_index</code></strong> &mdash; <em>Method</em>.</p>
+<div class="codehilite"><pre><span></span>truncate_by_index(x::Vector{}, t::Vector{}, index_range::Vector{})
+</pre></div>
+
+
+<p>Return copies of x and t truncated to the given range of samples. index_range is a list containing the start index (inclusive)and end index (exclusive). If index_range contains floats, they will be rounded down to ints. t must be a 1d array with the same length as dimension dim of x.</p>
+<p><a target='_blank' href='https://github.com/mirestrepo/EEGTest.jl/blob/d34916b4f098b8ad43b103c25b212f03cba7676c/src/eegutilities.jl#L204-L210' class='documenter-source'>source</a><br></p>
+<p><a id='EEGTest.truncate_by_index-Tuple{EEGTest.AnalogData,Array{Int64,1}}' href='#EEGTest.truncate_by_index-Tuple{EEGTest.AnalogData,Array{Int64,1}}'>#</a>
+<strong><code>EEGTest.truncate_by_index</code></strong> &mdash; <em>Method</em>.</p>
+<div class="codehilite"><pre><span></span>truncate_by_index(analogdata::AnalogData, index_range::Vector{})
+</pre></div>
+
+
+<p>Truncate t and every channel of x_all in the AnalogData object to the given range of sample.</p>
+<p><a target='_blank' href='https://github.com/mirestrepo/EEGTest.jl/blob/d34916b4f098b8ad43b103c25b212f03cba7676c/src/eegutilities.jl#L225-L229' class='documenter-source'>source</a><br></p>
+<p><a id='EEGTest.truncate_by_value-Tuple{Array{Float64,1},Array{Float64,1},Array{Float64,1}}' href='#EEGTest.truncate_by_value-Tuple{Array{Float64,1},Array{Float64,1},Array{Float64,1}}'>#</a>
+<strong><code>EEGTest.truncate_by_value</code></strong> &mdash; <em>Method</em>.</p>
+<div class="codehilite"><pre><span></span>truncate_by_value(x::Vector{}, t::Vector{}, t_range::Vector{})
+</pre></div>
+
+
+<p>Return copies of x and t truncated to approximately the given time range. t_range is a list containing the start and end times in seconds. t must be a 1d array with the same length as dimension dim of x.</p>
+<p><a target='_blank' href='https://github.com/mirestrepo/EEGTest.jl/blob/d34916b4f098b8ad43b103c25b212f03cba7676c/src/eegutilities.jl#L245-L250' class='documenter-source'>source</a><br></p>
+<p><a id='EEGTest.truncate_by_value-Tuple{EEGTest.AnalogData,Array{Float64,1}}' href='#EEGTest.truncate_by_value-Tuple{EEGTest.AnalogData,Array{Float64,1}}'>#</a>
+<strong><code>EEGTest.truncate_by_value</code></strong> &mdash; <em>Method</em>.</p>
+<div class="codehilite"><pre><span></span>truncate_by_value(analogdata::AnalogData, t_range::Vector{})
+</pre></div>
+
+
+<p>Truncate t and every channel of x_all in the AnalogData object to approximately the given time range.</p>
+<p><a target='_blank' href='https://github.com/mirestrepo/EEGTest.jl/blob/d34916b4f098b8ad43b103c25b212f03cba7676c/src/eegutilities.jl#L268-L272' class='documenter-source'>source</a><br></p>
+<p><a id='EEGTest.AnalogData-Tuple{Array{Float64,2},Array{Float64,1}}' href='#EEGTest.AnalogData-Tuple{Array{Float64,2},Array{Float64,1}}'>#</a>
+<strong><code>EEGTest.AnalogData</code></strong> &mdash; <em>Method</em>.</p>
+<div class="codehilite"><pre><span></span><span class="nt">AnalogData</span><span class="o">(</span><span class="nt">x_all</span><span class="p">::</span><span class="nd">Array</span><span class="p">{</span><span class="err">Float64,2</span><span class="p">}</span><span class="o">,</span> <span class="nt">t</span><span class="p">::</span><span class="nd">Vector</span><span class="p">{</span><span class="err">Float64</span><span class="p">}</span><span class="o">;</span>
+<span class="nt">original_fs</span><span class="p">::</span><span class="nd">Int64</span><span class="o">=</span><span class="nt">30000</span><span class="o">,</span> <span class="nt">channel_nums</span><span class="p">::</span><span class="nd">Vector</span><span class="p">{</span><span class="err">Int64</span><span class="p">}</span><span class="o">=</span><span class="cp">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="cp">]</span><span class="o">)</span>
+</pre></div>
+
+
+<p>Create analogdata object given only data and time- assumes all channels are desired.</p>
+<p><a target='_blank' href='https://github.com/mirestrepo/EEGTest.jl/blob/d34916b4f098b8ad43b103c25b212f03cba7676c/src/eegtypes.jl#L12-L18' class='documenter-source'>source</a><br></p>
+<p><a id='EEGTest.DigitalData-Tuple{Array{Bool,2},Array{Float64,1}}' href='#EEGTest.DigitalData-Tuple{Array{Bool,2},Array{Float64,1}}'>#</a>
+<strong><code>EEGTest.DigitalData</code></strong> &mdash; <em>Method</em>.</p>
+<div class="codehilite"><pre><span></span><span class="nt">DigitalData</span><span class="o">(</span><span class="nt">x_all</span><span class="p">::</span><span class="nd">Array</span><span class="p">{</span><span class="err">Bool,2</span><span class="p">}</span><span class="o">,</span> <span class="nt">t</span><span class="p">::</span><span class="nd">Vector</span><span class="p">{</span><span class="err">Float64</span><span class="p">}</span><span class="o">;</span>
+<span class="nt">original_fs</span><span class="p">::</span><span class="nd">Int64</span><span class="o">=</span><span class="nt">30000</span><span class="o">,</span> <span class="nt">channel_nums</span><span class="p">::</span><span class="nd">Vector</span><span class="p">{</span><span class="err">Int64</span><span class="p">}</span><span class="o">=</span><span class="cp">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="cp">]</span><span class="o">)</span>
+</pre></div>
+
+
+<p>Create digitaldata object given only data and time- assumes all channels are desired.</p>
+<p><a target='_blank' href='https://github.com/mirestrepo/EEGTest.jl/blob/d34916b4f098b8ad43b103c25b212f03cba7676c/src/eegtypes.jl#L106-L112' class='documenter-source'>source</a><br></p>
+<p><a id='EEGTest.Spectrogram' href='#EEGTest.Spectrogram'>#</a>
+<strong><code>EEGTest.Spectrogram</code></strong> &mdash; <em>Type</em>.</p>
+<div class="codehilite"><pre><span></span>Spectrogram(analog_data::AnalogData, n=1024)
+</pre></div>
+
+
+<p>Create a Spectrogram object from an AnalogData object. N decides the size of time bins</p>
+<p><a target='_blank' href='https://github.com/mirestrepo/EEGTest.jl/blob/d34916b4f098b8ad43b103c25b212f03cba7676c/src/eegtypes.jl#L146-L149' class='documenter-source'>source</a><br></p>
+<p><a id='EEGTest.format_full_array-Tuple{Array{Float64,1}}' href='#EEGTest.format_full_array-Tuple{Array{Float64,1}}'>#</a>
+<strong><code>EEGTest.format_full_array</code></strong> &mdash; <em>Method</em>.</p>
+<div class="codehilite"><pre><span></span>format_full_array(x::Array{Float64, 1})
+</pre></div>
+
+
+<p>Return string will full-precision respresentation of floats in the array. For getting exact values in test cases.</p>
+<p><a target='_blank' href='https://github.com/mirestrepo/EEGTest.jl/blob/d34916b4f098b8ad43b103c25b212f03cba7676c/src/eegutilities.jl#L126-L130' class='documenter-source'>source</a><br></p>
+<p><a id='EEGTest.highpass_session' href='#EEGTest.highpass_session'>#</a>
+<strong><code>EEGTest.highpass_session</code></strong> &mdash; <em>Function</em>.</p>
+<div class="codehilite"><pre><span></span><span class="nt">highpass_session</span><span class="o">(</span><span class="nt">session</span><span class="p">::</span><span class="nd">Session</span><span class="o">,</span> <span class="nt">highpass_cutoff</span><span class="p">::</span><span class="nd">Float64</span><span class="o">,</span> <span class="nt">highpass_order</span><span class="p">::</span><span class="nd">Int64</span><span class="o">=</span><span class="nt">5</span><span class="o">,</span>
+<span class="nt">prefix</span><span class="p">::</span><span class="nd">String</span><span class="o">=</span><span class="s2">&quot;100_CH&quot;</span><span class="o">;</span> <span class="nt">n</span><span class="p">::</span><span class="nd">Int64</span><span class="o">=</span><span class="nt">256</span><span class="o">)</span>
+</pre></div>
+
+
+<p>Highpass filter the eeg_data of a session and return the new filtered session. Change n here if you want a different value for the spectrogram of the filtered data.</p>
+<p><a target='_blank' href='https://github.com/mirestrepo/EEGTest.jl/blob/d34916b4f098b8ad43b103c25b212f03cba7676c/src/eegtypes.jl#L242-L247' class='documenter-source'>source</a><br></p>
+<p><a id='EEGTest.ica-Tuple{EEGTest.AnalogData}' href='#EEGTest.ica-Tuple{EEGTest.AnalogData}'>#</a>
+<strong><code>EEGTest.ica</code></strong> &mdash; <em>Method</em>.</p>
+<div class="codehilite"><pre><span></span>ica(ad::AnalogData)
+</pre></div>
+
+
+<p>Perform ICA over x_all of an AnalogData object and return the updated AnalogData. Number of components assumed to be number of channels.</p>
+<p><a target='_blank' href='https://github.com/mirestrepo/EEGTest.jl/blob/d34916b4f098b8ad43b103c25b212f03cba7676c/src/eegutilities.jl#L291-L295' class='documenter-source'>source</a><br></p>
+<p><a id='EEGTest.load_continuous-Tuple{String,Int64}' href='#EEGTest.load_continuous-Tuple{String,Int64}'>#</a>
+<strong><code>EEGTest.load_continuous</code></strong> &mdash; <em>Method</em>.</p>
+<div class="codehilite"><pre><span></span>load_continuous(path::String, fs::Int64)
+</pre></div>
+
+
+<p>Return an array of the data and an array of the time values given a file path and sampling rate</p>
+<p><a target='_blank' href='https://github.com/mirestrepo/EEGTest.jl/blob/d34916b4f098b8ad43b103c25b212f03cba7676c/src/eegtypes.jl#L46-L51' class='documenter-source'>source</a><br></p>
+<p><a id='EEGTest.load_continuous_channels' href='#EEGTest.load_continuous_channels'>#</a>
+<strong><code>EEGTest.load_continuous_channels</code></strong> &mdash; <em>Function</em>.</p>
+<div class="codehilite"><pre><span></span>load_continuous_channels(prefix::String, data_directory::String,fs::Int64,
+channel_nums::Vector{Int64}, recording_num::Int64=1)
+</pre></div>
+
+
+<p>Creates an analogdata object given the desired channel numbers, data directory, and data prefix. Recording num is to account for if there are multiple recordings, in which case the appropriate number is added to the filename.</p>
+<p><a target='_blank' href='https://github.com/mirestrepo/EEGTest.jl/blob/d34916b4f098b8ad43b103c25b212f03cba7676c/src/eegtypes.jl#L63-L70' class='documenter-source'>source</a><br></p>
+<p><a id='EEGTest.load_eeg' href='#EEGTest.load_eeg'>#</a>
+<strong><code>EEGTest.load_eeg</code></strong> &mdash; <em>Function</em>.</p>
+<div class="codehilite"><pre><span></span>load_eeg(session::Session, channel_nums::Vector{Int64})
+</pre></div>
+
+
+<p>Load EEG data into a session</p>
+<p><a target='_blank' href='https://github.com/mirestrepo/EEGTest.jl/blob/d34916b4f098b8ad43b103c25b212f03cba7676c/src/eegtypes.jl#L204-L207' class='documenter-source'>source</a><br></p>
+<p><a id='EEGTest.lowpass_session' href='#EEGTest.lowpass_session'>#</a>
+<strong><code>EEGTest.lowpass_session</code></strong> &mdash; <em>Function</em>.</p>
+<div class="codehilite"><pre><span></span>lowpass_session(session::Session, lowpass_cutoff::Float64, lowpass_fs::Int64,
+down_sample_factor::Int64, lowpass_order::Int64=5, prefix::String=&quot;100_CH&quot;)
+</pre></div>
+
+
+<p>Filter the eeg_data of a session with both lowpass and downsampling and return the new filtered session. If no downsampling factor is provided, it is assumed to be 1 and no downsampling occurs. Change n here if you want a different value for the spectrogram of the filtered data.</p>
+<p><a target='_blank' href='https://github.com/mirestrepo/EEGTest.jl/blob/d34916b4f098b8ad43b103c25b212f03cba7676c/src/eegtypes.jl#L220-L227' class='documenter-source'>source</a><br></p>
+<p><a id='EEGTest.session_equals-Tuple{EEGTest.Session,EEGTest.Session}' href='#EEGTest.session_equals-Tuple{EEGTest.Session,EEGTest.Session}'>#</a>
+<strong><code>EEGTest.session_equals</code></strong> &mdash; <em>Method</em>.</p>
+<div class="codehilite"><pre><span></span><span class="kd">function</span> <span class="nx">session_equals</span><span class="p">(</span><span class="nx">s1</span><span class="o">::</span><span class="nx">Session</span><span class="p">,</span> <span class="nx">s2</span><span class="o">::</span><span class="nx">Session</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Check whether two session objects are equal.</p>
+<p><a target='_blank' href='https://github.com/mirestrepo/EEGTest.jl/blob/d34916b4f098b8ad43b103c25b212f03cba7676c/src/eegtypes.jl#L190-L193' class='documenter-source'>source</a><br></p>
+<p><a id='EEGTest.Session' href='#EEGTest.Session'>#</a>
+<strong><code>EEGTest.Session</code></strong> &mdash; <em>Type</em>.</p>
+<div class="codehilite"><pre><span></span>Session(name::String, directory::String, eeg_data=Nullable{AnalogData}(), n::Int64=256))
+</pre></div>
+
+
+<p>Create a Session object. Providing eeg_data will automatically create a spectrogram, so change n here if necessary.</p>
+<p><a target='_blank' href='https://github.com/mirestrepo/EEGTest.jl/blob/d34916b4f098b8ad43b103c25b212f03cba7676c/src/eegtypes.jl#L176-L180' class='documenter-source'>source</a><br></p>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="./assets/javascripts/application.9fb73e57.js"></script>
+      
+      <script>app.initialize({version:"0.17.2",url:{base:"."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
